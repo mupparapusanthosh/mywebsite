@@ -1,0 +1,103 @@
+/* Small-screen logo & container padding */
+@media (max-width: 768px) {
+  .logo-container {
+    width: 100%;
+    text-align: center;
+    justify-content: center !important;
+  }
+  .logo-container img {
+    margin: 0 auto;
+  }
+  .wrapper-sm {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+/* Navbar */
+.nav-blue {
+  background: #004a99;
+}
+.nav-blue .nav-link {
+  color: #fff !important;
+  font-weight: 600;
+}
+
+/* Dropdown */
+.navbar-nav .dropdown-menu {
+  background-color: #003b80;
+  border: none;
+}
+.navbar-nav .dropdown-item {
+  color: #fff;
+  font-size: 14px;
+}
+.navbar-nav .dropdown-item:hover {
+  background-color: #002a5c;
+  color: #fff;
+}
+
+/* Carousel caption */
+.carousel-caption {
+  background: rgba(0, 0, 0, 0.45);
+  padding: 10px 15px;
+  border-radius: 6px;
+}
+
+/* Info box */
+.info-box {
+  background: linear-gradient(135deg, #0066cc, #00a8e8);
+  color: #fff;
+  padding: 25px;
+  border-radius: 5px;
+  height: 100%;
+}
+
+/* Corner highlight for cards */
+.corner-shape {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-top: 30px solid #dc3545;
+  border-left: 30px solid transparent;
+  border-radius: 0 5px 0 0;
+}
+
+/* Gallery thumbnails */
+.thumb-scroll {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  padding: 12px 0;
+}
+.thumb-scroll img {
+  height: 150px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.thumb-scroll img:hover {
+  transform: scale(1.08);
+}
+
+/* Responsive thumbnail heights */
+@media (max-width: 992px) {
+  .thumb-scroll img { height: 130px; }
+}
+@media (max-width: 768px) {
+  .thumb-scroll img { height: 110px; }
+}
+@media (max-width: 500px) {
+  .thumb-scroll img { height: 95px; }
+}
+@media (max-width: 400px) {
+  .thumb-scroll img { height: 85px; }
+}
+
+/* Footer */
+.footer-blue {
+  background: #004a99;
+}
