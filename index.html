@@ -8,78 +8,11 @@
   <!-- Bootstrap 4 CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
-  <style>
+  <!-- Fancybox CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css">
 
-    /* Center logo on small screens */
-@media(max-width: 768px){
-  .logo-container {
-    width: 100%;
-    text-align: center;
-    justify-content: center !important;
-  }
-  .logo-container img {
-    margin: 0 auto;
-  }
-}
-
-    /* Wrapper for small devices */
-    @media(max-width: 768px){
-      .wrapper-sm {
-        padding-left: 10px;
-        padding-right: 10px;
-      }
-    }
-
-    /* Info box styling */
-    .info-box {
-      background: linear-gradient(135deg, #0066cc, #00a8e8);
-      color: #fff;
-      padding: 25px;
-      border-radius: 5px;
-      height: 100%;
-    }
-
-    .nav-blue {
-      background: #004a99;
-    }
-
-    .nav-blue .nav-link {
-      color: #fff !important;
-      font-weight: 600;
-    }
-
-    /* Dropdown Menu Styling */
-.navbar-nav .dropdown-menu {
-    background-color: #003b80;   /* CBIT dark blue */
-    border: none;
-    margin-top: 0;
-}
-
-.navbar-nav .dropdown-item {
-    color: #fff;
-    padding: 10px 20px;
-    font-size: 14px;
-}
-
-.navbar-nav .dropdown-item:hover {
-    background-color: #002a5c;
-    color: #fff;
-}
-
-/* Show dropdown on hover (desktop only) */
-@media (min-width: 992px) {
-    .navbar-nav .dropdown:hover .dropdown-menu {
-        display: block;
-    }
-}
-
-
-    .carousel-caption {
-      background: rgba(0,0,0,0.45);
-      padding: 15px;
-      border-radius: 6px;
-    }
-  </style>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -87,8 +20,6 @@
 <!-- HEADER -->
 <header class="py-2 border-bottom">
   <div class="container d-flex justify-content-between align-items-center flex-wrap wrapper-sm">
-
-    <!-- LOGO AREA -->
     <div class="d-flex align-items-center logo-container">
       <img src="img/Logo.jpg" alt="Logo" style="height:100px;">
       <div class="ml-3 d-none d-lg-block">
@@ -96,20 +27,12 @@
         <span></span>
       </div>
     </div>
-
-    <!-- RIGHT SIDE LINKS -->
-    <div class="d-none d-lg-block">
-      <!-- (links removed as you commented them) -->
-    </div>
-
   </div>
 </header>
-
 
 <!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg navbar-dark nav-blue">
   <div class="container wrapper-sm">
-
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNav">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -117,165 +40,120 @@
     <div class="collapse navbar-collapse" id="mainNav">
       <ul class="navbar-nav mx-auto">
         <li class="nav-item"><a class="nav-link" href="#">ABOUT US</a></li>
-       
-      <li class="nav-item dropdown">
-  <a class="nav-link dropdown-toggle" href="#" id="cbitDropdown" role="button" data-toggle="dropdown">
-  NEWS ROOM
-  </a>
 
-  <div class="dropdown-menu" aria-labelledby="cbitDropdown">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="cbitDropdown" role="button" data-toggle="dropdown">
+            NEWS ROOM
+          </a>
+          <div class="dropdown-menu" aria-labelledby="cbitDropdown">
+            <a class="dropdown-item" href="#">1</a>
+            <a class="dropdown-item" href="#">2</a>
+            <a class="dropdown-item" href="#">3</a>
+            <a class="dropdown-item" href="#">4</a>
+            <a class="dropdown-item" href="#">5</a>
+            <a class="dropdown-item" href="#">6</a>
+          </div>
+        </li>
 
-    <a class="dropdown-item" href="#">1</a>
-    <a class="dropdown-item" href="#">2</a>
-    <a class="dropdown-item" href="#">3</a>
-    <a class="dropdown-item" href="#">4</a>
-    <a class="dropdown-item" href="#">5</a>
-    <a class="dropdown-item" href="#">6</a>
-   
-
-  </div>
-</li>
         <li class="nav-item"><a class="nav-link" href="#">GALLERY</a></li>
         <li class="nav-item"><a class="nav-link" href="#">MEMBERS</a></li>
-      
-        
       </ul>
     </div>
-
   </div>
 </nav>
 
-<!-- MAIN SECTION -->
+<!-- MAIN SECTION: CAROUSEL + REGISTER BOX -->
 <section class="container my-4 wrapper-sm">
   <div class="row">
-
-    <!-- CAROUSEL WITH TEXT OVERLAY -->
     <div class="col-lg-8 mb-3">
-
       <div id="alumniCarousel" class="carousel slide" data-ride="carousel" data-interval="3000">
+        <ol class="carousel-indicators">
+          <li data-target="#alumniCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#alumniCarousel" data-slide-to="1"></li>
+          <li data-target="#alumniCarousel" data-slide-to="2"></li>
+        </ol>
 
-  <!-- Indicators -->
-  <ol class="carousel-indicators">
-    <li data-target="#alumniCarousel" data-slide-to="0" class="active"></li>
-    <li data-target="#alumniCarousel" data-slide-to="1"></li>
-    <li data-target="#alumniCarousel" data-slide-to="2"></li>
-  </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="img/123.jpg" class="d-block w-100 rounded shadow" alt="Slide 1">
+            <div class="carousel-caption">
+              <h4>Welcome to Official Alumni</h4>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="img/124.jpg" class="d-block w-100 rounded shadow" alt="Slide 2">
+            <div class="carousel-caption">
+              <h4>Welcome to Official Alumni</h4>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="img/125.jpg" class="d-block w-100 rounded shadow" alt="Slide 3">
+            <div class="carousel-caption">
+              <h4>Welcome to Official Alumni</h4>
+            </div>
+          </div>
+        </div>
 
-  <!-- Slides -->
-  <div class="carousel-inner">
-
-    <div class="carousel-item active">
-      <img src="img/slide1.jpg" class="d-block w-100 rounded shadow" alt="Slide 1">
-      <div class="carousel-caption">
-        <h4>Welcome to Official Alumni</h4>
-        <p></p>
+        <a class="carousel-control-prev" href="#alumniCarousel" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#alumniCarousel" role="button" data-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </a>
       </div>
     </div>
 
-    <div class="carousel-item">
-      <img src="img/slide2.jpg" class="d-block w-100 rounded shadow" alt="Slide 2">
-      <div class="carousel-caption">
-        <h4>Welcome to Official Alumni</h4>
-        <p></p>
-      </div>
-    </div>
-
-    <div class="carousel-item">
-      <img src="img/slide3.jpg" class="d-block w-100 rounded shadow" alt="Slide 3">
-      <div class="carousel-caption">
-        <h4>Welcome to Official Alumni</h4>
-        <p></p>
-      </div>
-    </div>
-
-  </div>
-
-  <!-- Controls -->
-  <a class="carousel-control-prev" href="#alumniCarousel" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon"></span>
-  </a>
-
-  <a class="carousel-control-next" href="#alumniCarousel" role="button" data-slide="next">
-    <span class="carousel-control-next-icon"></span>
-  </a>
-
-</div>
-
-
-    </div>
-
-    <!-- INFO BOX RIGHT -->
     <div class="col-lg-4">
       <div class="info-box shadow">
         <h5 class="font-weight-bold mb-3">Register</h5>
-       
-
         <a href="#" class="btn btn-light mt-2 font-weight-bold">REGISTER</a>
       </div>
     </div>
-
   </div>
 </section>
 
-<!-- NEWSROOM & EVENTS SECTION -->
+<!-- NEWSROOM & EVENTS -->
 <section class="container my-4 wrapper-sm">
   <div class="row">
-
-    <!-- NEWSROOM -->
     <div class="col-lg-8 mb-4">
       <div class="shadow rounded bg-white p-3 position-relative">
-
-        <!-- Header -->
         <div class="d-flex align-items-center mb-3">
           <img src="https://img.icons8.com/ios-filled/50/megaphone.png" width="28" class="mr-2">
           <h5 class="font-weight-bold text-danger mb-0">NEWSROOM</h5>
         </div>
 
-        <!-- Gradient corner -->
         <div class="corner-shape"></div>
 
-        <!-- News List -->
         <ul class="list-group list-group-flush">
           <li class="list-group-item d-flex justify-content-between">
-            <span>News1.</span>
-            <small class="text-muted">Date</small>
+            <span>News1.</span><small class="text-muted">Date</small>
           </li>
-
           <li class="list-group-item d-flex justify-content-between">
-            <span>News2.</span>
-            <small class="text-muted">Date</small>
+            <span>News2.</span><small class="text-muted">Date</small>
           </li>
-
           <li class="list-group-item d-flex justify-content-between">
-            <span>News3.</span>
-            <small class="text-muted">Date</small>
+            <span>News3.</span><small class="text-muted">Date</small>
           </li>
-
           <li class="list-group-item d-flex justify-content-between">
-            <span>News4.</span>
+            <span>News4.</span><small class="text-muted">Date</small>
+          </li>
+          <li class="list-group-item d-flex justify-content-between">
+            <span>News5.</span>
             <small class="text-muted">Date</small>
           </li>
-
-         
         </ul>
-
       </div>
     </div>
 
-    <!-- EVENTS -->
     <div class="col-lg-4 mb-4">
       <div class="shadow rounded bg-white p-3 position-relative">
-
-        <!-- Header -->
         <div class="d-flex align-items-center mb-3">
           <img src="https://img.icons8.com/ios-filled/50/calendar.png" width="26" class="mr-2">
           <h5 class="font-weight-bold text-danger mb-0">EVENTS</h5>
         </div>
 
-        <!-- Gradient corner -->
         <div class="corner-shape"></div>
 
-        <!-- Upcoming -->
         <div class="border-bottom pb-3 mb-3">
           <small class="text-muted text-uppercase">Upcoming</small>
           <div class="d-flex mt-2">
@@ -290,7 +168,6 @@
           </div>
         </div>
 
-        <!-- Past -->
         <small class="text-muted text-uppercase">Past</small>
         <div class="d-flex mt-2">
           <div class="mr-3 text-center">
@@ -302,61 +179,35 @@
             <small class="text-muted">SD</small>
           </div>
         </div>
-
       </div>
     </div>
-
   </div>
 </section>
 
-<!-- GALLERY SECTION -->
-<!-- GALLERY TITLE -->
+<!-- GALLERY -->
 <h2 class="text-center mt-5 font-weight-bold">Gallery</h2>
-
-<!-- IMAGE GALLERY -->
-<div class="container py-4">
-  <div class="row">
-
-    <!-- Image 1 -->
-    <div class="col-md-4 mb-4">
-      <img src="https://via.placeholder.com/600x400" 
-           class="img-fluid gallery-img"
-           data-toggle="modal" data-target="#lightboxModal"
-           data-img="https://via.placeholder.com/1200x800">
-    </div>
-
-    <!-- Image 2 -->
-    <div class="col-md-4 mb-4">
-      <img src="https://via.placeholder.com/600x400/888" 
-           class="img-fluid gallery-img"
-           data-toggle="modal" data-target="#lightboxModal"
-           data-img="https://via.placeholder.com/1200x800/888">
-    </div>
-
-    <!-- Image 3 -->
-    <div class="col-md-4 mb-4">
-      <img src="https://via.placeholder.com/600x400/555" 
-           class="img-fluid gallery-img"
-           data-toggle="modal" data-target="#lightboxModal"
-           data-img="https://via.placeholder.com/1200x800/555">
-    </div>
-
-  </div>
-</div>
-
-<!-- LIGHTBOX MODAL -->
-<div class="modal fade" id="lightboxModal" tabindex="-1" role="dialog">
-  <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content bg-dark">
-      <div class="modal-body p-0">
-        <img id="lightboxImage" class="img-fluid w-100">
-      </div>
-    </div>
+<div class="container py-4 wrapper-sm">
+  <div class="thumb-scroll">
+    <a data-fancybox="gallery" href="Gallery/1-Small.jpg">
+      <img src="Gallery/1-Small.jpg" alt="Gallery 1">
+    </a>
+    <a data-fancybox="gallery" href="Gallery/2-Small.jpg">
+      <img src="Gallery/2-Small.jpg" alt="Gallery 2">
+    </a>
+    <a data-fancybox="gallery" href="Gallery/3-Small.jpg">
+      <img src="Gallery/3-Small.jpg" alt="Gallery 3">
+    </a>
+    <a data-fancybox="gallery" href="Gallery/1-Small.jpg">
+      <img src="Gallery/1-Small.jpg" alt="Gallery 4">
+    </a>
+    <a data-fancybox="gallery" href="Gallery/2-Small.jpg">
+      <img src="Gallery/2-Small.jpg" alt="Gallery 5">
+    </a>
   </div>
 </div>
 
 <!-- FOOTER -->
-<footer style="background:#004a99;" class="text-white py-3 mt-5">
+<footer class="footer-blue text-white py-3 mt-5">
   <div class="container text-center">
     <p class="mb-0">
       © 2025 Sree Dattha Group of Educational Institutions — All Rights Reserved.
@@ -364,12 +215,13 @@
   </div>
 </footer>
 
-
-
-
-<!-- Scripts -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<!-- JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
+
+<!-- Custom JS -->
+<script src="js/script.js"></script>
 
 </body>
 </html>
